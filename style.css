@@ -1,0 +1,192 @@
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+picture,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* font-family: 'Poppins', sans-serif;
+   font-family: 'Open Sans', sans-serif; */
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 1rem;
+}
+
+.container{
+    width: 90%;
+    max-width: 450px;
+    margin-inline: auto;
+    background-color: var(--violet);  
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.desktop-bg{
+    display: none;
+}
+
+.background-pics{
+    position: absolute;
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+    z-index: -1;
+}
+
+.inner-container{
+    width: 80%;
+    margin-inline: auto;
+}
+
+.header-images{
+    padding: 2rem 0;
+}
+
+.logo{
+    width: 45%;
+    margin-bottom: 3rem;
+}
+
+.main-info{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.main-info p{
+    margin-bottom: 2rem;
+}
+
+.btn{
+    background-color: white;
+    color: var(--violet);
+    width: 75%;
+    margin-inline: auto;
+    padding: 1rem 0;
+    border-radius: 50px;
+    box-shadow: 3px 5px 10px 2px rgba(51, 42, 66, 0.4);
+    transition: .2s ease-in;
+}
+
+.btn:hover{
+    background-color: var(--soft-magenta);
+    color: white;
+}
+
+.social-icons{
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.s-icon{
+    position: relative;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;    
+}
+
+.s-icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.attribution{
+    text-align: center;
+    padding: 2rem 0;
+    font-size: .8rem;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: white;
+    transition: .2s ease-in;
+}
+
+.attribution a:hover{
+    color: var(--soft-magenta);
+}
