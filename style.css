@@ -141,9 +141,11 @@ h1{
     color: var(--violet);
     width: 75%;
     margin-inline: auto;
+    text-align: center;
     padding: 1rem 0;
     border-radius: 50px;
     box-shadow: 3px 5px 10px 2px rgba(51, 42, 66, 0.4);
+    cursor: pointer;
     transition: .2s ease-in;
 }
 
@@ -157,7 +159,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1rem;    
 }
 
 .s-icon{
@@ -165,7 +167,9 @@ h1{
     border: 1px solid white;
     width: 30px;
     height: 30px;
-    border-radius: 50px;    
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s ease-in;
 }
 
 .s-icon i{
@@ -173,6 +177,11 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.s-icon:hover{
+    border: 1px solid var(--soft-magenta); 
+    color: var(--soft-magenta);   
 }
 
 .attribution{
@@ -189,4 +198,46 @@ h1{
 
 .attribution a:hover{
     color: var(--soft-magenta);
+}
+
+@media (min-width: 910px){
+    .container{
+        max-width: 1200px;
+    }
+
+    .inner-container{
+        width: 90%;
+    }
+
+    .background-pics{
+        background-image: url(images/bg-desktop.svg);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .desktop-flex{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .header-images{
+        width: 50%;
+    }
+
+    .main-info{
+        width: 50%;
+        text-align: left;
+    }
+
+    .btn{
+        margin: 0;
+        max-width: 35%;
+    }
+
+    .social-icons{
+        justify-content: flex-end;
+    }
 }
